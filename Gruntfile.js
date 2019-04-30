@@ -114,8 +114,8 @@ module.exports = function(grunt) {
 			concat: {
 				dist: {
 					files: {
-						'dist/assets/owl.carousel.css': [ 'src/css/*.css', '!src/css/owl.theme*.css' ],
-						'dist/<%= pkg.name %>.js': '<%= app.src.scripts %>'
+						'dist/assets/<%= app.name %>.css': [ 'src/css/*.css', '!src/css/owl.theme*.css' ],
+						'dist/<%= app.name %>.js': '<%= app.src.scripts %>'
 					}
 				}
 			},
@@ -123,7 +123,7 @@ module.exports = function(grunt) {
 			cssmin: {
 				dist: {
 					files: {
-						'dist/assets/<%= pkg.name %>.min.css': [ 'src/css/*.css', '!src/css/owl.theme*.css' ],
+						'dist/assets/<%= app.name %>.min.css': [ 'src/css/*.css', '!src/css/owl.theme*.css' ],
 						'dist/assets/owl.theme.default.min.css': 'src/css/owl.theme.default.css',
 						'dist/assets/owl.theme.green.min.css': 'src/css/owl.theme.green.css'
 					}
@@ -153,7 +153,7 @@ module.exports = function(grunt) {
 			uglify: {
 				dist: {
 					files: {
-						'dist/<%= pkg.name %>.min.js': '<%= app.src.scripts %>'
+						'dist/<%= app.name %>.min.js': '<%= app.src.scripts %>'
 					}
 				}
 			},
