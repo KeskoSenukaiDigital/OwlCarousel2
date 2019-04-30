@@ -75,7 +75,7 @@
 				}
 				if (this.filling) {
 					e.property.value.data('owl-item').dot = $(':first-child', e.property.value)
-						.find('[data-dot]').andSelf().data('dot');
+						.find('[data-dot]').addBack().data('dot');
 				}
 			}, this),
 			'change.owl.carousel': $.proxy(function(e) {
