@@ -2813,7 +2813,7 @@
 				}
 				if (this.filling) {
 					e.property.value.data('owl-item').dot = $(':first-child', e.property.value)
-						.find('[data-dot]').andSelf().data('dot');
+						.find('[data-dot]').addBack().data('dot');
 				}
 			}, this),
 			'change.owl.carousel': $.proxy(function(e) {
@@ -3161,7 +3161,7 @@
 			'changed.owl.carousel': $.proxy(function(e) {
 				if (this.filling) {
 					e.property.value.data('owl-item').hash
-						= $(':first-child', e.property.value).find('[data-hash]').andSelf().data('hash');
+						= $(':first-child', e.property.value).find('[data-hash]').addBack().data('hash');
 					this.hashes[e.property.value.data('owl-item').hash] = e.property.value;
 				}
 			}, this),
